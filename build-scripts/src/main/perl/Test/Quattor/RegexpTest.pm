@@ -92,8 +92,7 @@ sub _initialize
 
 Parse the regexp file in 3 sections: description, flags and tests.
 
-Each section is converted in an instance attribute named 'description',
- 'flags' and 'tests'.
+Each section is converted in an instance attribute named 'description', flags' and 'tests'.
 
 =cut
 
@@ -316,17 +315,17 @@ has to be an exact match, incl EOF newline etc.
 Without the C<quote> flag set, the tests are parsed line by line,
 and seen as one regexp per line.
 
-Lines starting with C<\s*#{3} > (trailing space!) are comments.
+Lines starting with C< \s*#{3} > (trailing space!) are comments.
 
-Lines ending with C<\s#{3}> are interpreted as having options set.
+Lines ending with C< \s#{3} > are interpreted as having options set.
 Supported options
 
 =over
 
 =item COUNT
 
-C<COUNT \d+> is the exact number of matches
-(use C<COUNT 0 >to make sure a line doesn't match).
+C< COUNT \d+ > is the exact number of matches
+(use C< COUNT 0 > to make sure a line doesn't match).
 
 This is a global count, e.g. in ordered mode the count
 itself is not number of matches since previous test match.
@@ -506,7 +505,7 @@ sub postprocess
 
 =head2 test
 
-Perform the tests as defined in the flags and specified in the 'tests' section
+Perform the tests as defined in the flags and specified in the 'tests' section.
 
 =cut
 
